@@ -10,8 +10,8 @@
 import pygame
 from enum import Enum
 
-from Button import Button
-from algorithm import algorithm
+from src.Button import Button
+from src.algorithm import algorithm
 
 
 class GridSquareState(Enum):
@@ -141,12 +141,12 @@ class Game:
         self.grid = Grid(self.window, rows, width, width)
 
         # play button (https://www.freeiconspng.com/img/18927)
-        play_img = pygame.image.load("images/play.png").convert_alpha()
+        play_img = pygame.image.load("src/images/play.png").convert_alpha()
         self.play_btn = Button(self.window, 350, 820, play_img, 40, self.start_animation)
         self.play_btn.act()
 
         # reload button (https://www.freeiconspng.com/img/16891)
-        reload_img = pygame.image.load("images/reload.png").convert_alpha()
+        reload_img = pygame.image.load("src/images/reload.png").convert_alpha()
         self.reload_btn = Button(self.window, 450, 820, reload_img, 40, self.reload_animation)
         self.reload_btn.act()
 
